@@ -105,7 +105,6 @@ public class MainFrame extends FrameInheritance {
         DefaultTableModel defaultTableModel = new DefaultTableModel(columnNames,0);
         resultJTable.setModel(defaultTableModel);
 
-        //adding rows
         for (Object objects : listToTable) {
             defaultTableModel.addRow((Object[]) objects);
         }
@@ -114,8 +113,14 @@ public class MainFrame extends FrameInheritance {
     private List<Object> getList(String definedQuery) {
         startSession();
         List<Object> objects = session.createQuery(definedQuery).getResultList();
+
+        List<Object[]> list = session.createQuery("select pd.quantityInStock, p.productName from ProductDetail pd " +
+                "join pd.product p").getResultList();
+        for (Object[] o : list) {
+            System.out.println(o[0]+" "+o[1]);
+        }
+
         stopSession();
-        //123
 
         return objects;
     }

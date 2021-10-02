@@ -13,7 +13,8 @@ public class DbConnector {
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Customers.class).addAnnotatedClass(CustomerDetails.class)
                 .addAnnotatedClass(Employee.class).addAnnotatedClass(Product.class)
-                .addAnnotatedClass(Order.class).addAnnotatedClass(OrderDetail.class);
+                .addAnnotatedClass(Order.class).addAnnotatedClass(OrderDetail.class)
+                .addAnnotatedClass(ProductDetail.class);
         sf = configuration.buildSessionFactory();
     }
 

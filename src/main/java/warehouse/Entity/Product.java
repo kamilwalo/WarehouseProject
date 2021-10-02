@@ -17,7 +17,6 @@ public class Product {
     @Column(name = "price")
     private Integer price;
 
-
     public Product() {
     }
 
