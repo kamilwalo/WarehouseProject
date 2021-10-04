@@ -9,49 +9,49 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.MainController">
+<AnchorPane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.MainController">
    <children>
-      <Button contentDisplay="CENTER" layoutX="32.0" layoutY="27.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <Button contentDisplay="CENTER" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="20.0" maxHeight="100.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
+      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="20.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="150.0" maxHeight="100.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0">
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="150.0" maxHeight="200.0" maxWidth="100.0" minHeight="100.0" minWidth="100.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0">
+      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="150.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" maxHeight="200.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="280.0" maxHeight="100.0" maxWidth="100.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
+      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="280.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
          <font>
             <Font size="17.0" />
          </font>
       </Button>
-      <TextField fx:id="searchField" alignment="CENTER" layoutX="295.0" layoutY="70.0" prefHeight="33.0" prefWidth="486.0" promptText="find product" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="70.0" />
+      <TextField fx:id="searchField" alignment="CENTER" layoutX="315.0" layoutY="60.0" prefHeight="33.0" prefWidth="486.0" promptText="find product" AnchorPane.rightAnchor="20.600000000000023" AnchorPane.topAnchor="60.0" />
       <TableView fx:id="productTable" layoutX="285.0" layoutY="150.0" prefHeight="430.0" prefWidth="486.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
         <columns>
           <TableColumn fx:id="idProductColumn" text="ID" />
           <TableColumn fx:id="nameOfProductColumn" prefWidth="255.99993133544922" text="name" />
             <TableColumn fx:id="priceOfProductColumn" prefWidth="69.60009765625" text="price" />
-            <TableColumn fx:id="quantityOfProductColumn" prefWidth="79.20001831054685" text="quantity" />
+            <TableColumn fx:id="quantityOfProductColumn" prefWidth="79.20001831054685" resizable="false" text="quantity" />
         </columns>
       </TableView>
       <Button fx:id="searchButton" layoutX="295.0" layoutY="105.0" mnemonicParsing="false" onAction="#searchButtonClicked" prefHeight="30.0" prefWidth="486.0" text="Search" AnchorPane.rightAnchor="20.0" />
-      <Label alignment="CENTER" layoutX="295.0" layoutY="20.0" prefHeight="18.0" prefWidth="486.0" text="Products" AnchorPane.rightAnchor="20.0">
+      <Label fx:id="titleProduct" alignment="CENTER" layoutX="315.0" layoutY="14.0" prefHeight="18.0" prefWidth="486.0" text="Products" AnchorPane.rightAnchor="20.600000000000023" AnchorPane.topAnchor="14.0">
          <font>
             <Font name="Yu Gothic Regular" size="33.0" />
          </font>

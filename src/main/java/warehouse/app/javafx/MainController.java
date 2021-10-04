@@ -7,16 +7,21 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import warehouse.Entity.ProductDetail;
 import warehouse.app.db.DbConnector;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
 
+    @FXML private Label titleProduct;
     @FXML private TableView<Object[]> productTable;
     @FXML private TableColumn <ProductDetail,Object> idProductColumn;
     @FXML private TableColumn <ProductDetail,String> nameOfProductColumn;
@@ -28,9 +33,9 @@ public class MainController implements Initializable {
     @FXML private TextField searchField;
     @FXML private Button searchButton;
 
-    private final DbConnector dbConnector = new DbConnector();
-    private final SessionFactory sf = dbConnector.getSf();
-    private Session session =sf.getCurrentSession();
+    private DbConnector dbConnector ;
+    private SessionFactory sf ;
+    private Session session ;
 
     ObservableList<Object[]> products;
 
@@ -46,7 +51,14 @@ public class MainController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setTable("");
+
+        productTable.setPlaceholder(new Label("Waiting for connection with db..."));
+        Thread thread = new Thread(()->{
+            dbConnector = new DbConnector();
+            sf = dbConnector.getSf();
+            setTable("");
+        });
+        thread.start();
     }
 
     public void searchButtonClicked(){
