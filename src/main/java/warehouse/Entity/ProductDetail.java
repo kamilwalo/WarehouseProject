@@ -19,8 +19,12 @@ public class ProductDetail {
     @Column(name = "id_product_detail", nullable = false)
     private Integer id;
 
+
+
     public ProductDetail() {
     }
+
+
 
     public Integer getId() {
         return id;

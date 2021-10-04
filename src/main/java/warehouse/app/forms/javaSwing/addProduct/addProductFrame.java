@@ -1,8 +1,8 @@
-package warehouse.app.forms.addProduct;
+package warehouse.app.forms.javaSwing.addProduct;
 
 import warehouse.Entity.Product;
-import warehouse.app.forms.FrameInheritance;
-import warehouse.app.forms.mainFrame.MainFrame;
+import warehouse.app.forms.javaSwing.FrameInheritance;
+import warehouse.app.forms.javaSwing.mainFrame.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;

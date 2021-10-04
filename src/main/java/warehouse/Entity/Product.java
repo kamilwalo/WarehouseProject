@@ -25,6 +25,10 @@ public class Product {
         this.price = price;
     }
 
+    public Integer getProductId() {
+        return productId;
+    }
+
     public String getProductName() {
         return productName;
     }

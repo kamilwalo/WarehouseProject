@@ -1,10 +1,10 @@
-package warehouse.app.forms.addCustomer;
+package warehouse.app.forms.javaSwing.addCustomer;
 
 
 import warehouse.Entity.CustomerDetails;
 import warehouse.Entity.Customers;
-import warehouse.app.forms.FrameInheritance;
-import warehouse.app.forms.mainFrame.MainFrame;
+import warehouse.app.forms.javaSwing.FrameInheritance;
+import warehouse.app.forms.javaSwing.mainFrame.MainFrame;
 
 import javax.swing.*;
 

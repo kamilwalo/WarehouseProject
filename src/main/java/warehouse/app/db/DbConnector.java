@@ -7,9 +7,9 @@ import warehouse.Entity.*;
 
 public class DbConnector {
 
-    private final SessionFactory sf;
+    private static  SessionFactory sf;
 
-    public DbConnector(){
+    public  DbConnector(){
         Configuration configuration = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(Customers.class).addAnnotatedClass(CustomerDetails.class)
                 .addAnnotatedClass(Employee.class).addAnnotatedClass(Product.class)

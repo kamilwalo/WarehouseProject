@@ -1,11 +1,11 @@
-package warehouse.app.forms.mainFrame;
+package warehouse.app.forms.javaSwing.mainFrame;
 
-import warehouse.app.forms.FrameInheritance;
-import warehouse.app.forms.addCustomer.AddCustomer;
-import warehouse.app.forms.addOrder.AddOrder;
-import warehouse.app.forms.addProduct.addProductFrame;
-import warehouse.app.forms.deleteData.deleteWindow;
-import warehouse.app.forms.showOrdersWindow.ShowOrders;
+import warehouse.app.forms.javaSwing.FrameInheritance;
+import warehouse.app.forms.javaSwing.addCustomer.AddCustomer;
+import warehouse.app.forms.javaSwing.addOrder.AddOrder;
+import warehouse.app.forms.javaSwing.addProduct.addProductFrame;
+import warehouse.app.forms.javaSwing.deleteData.deleteWindow;
+import warehouse.app.forms.javaSwing.showOrdersWindow.ShowOrders;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

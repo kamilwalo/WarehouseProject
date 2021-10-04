@@ -1,4 +1,4 @@
-package warehouse.app.forms;
+package warehouse.app.forms.javaSwing;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

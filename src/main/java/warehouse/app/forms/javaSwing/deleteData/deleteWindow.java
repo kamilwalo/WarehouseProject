@@ -1,8 +1,8 @@
-package warehouse.app.forms.deleteData;
+package warehouse.app.forms.javaSwing.deleteData;
 
 import warehouse.Entity.Employee;
-import warehouse.app.forms.FrameInheritance;
-import warehouse.app.forms.mainFrame.MainFrame;
+import warehouse.app.forms.javaSwing.FrameInheritance;
+import warehouse.app.forms.javaSwing.mainFrame.MainFrame;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
