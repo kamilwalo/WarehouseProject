@@ -17,7 +17,7 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Main-windows.fxml"))));
+        Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Product-windows.fxml"))));
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
         stage.setScene(scene);
         stage.setResizable(false);

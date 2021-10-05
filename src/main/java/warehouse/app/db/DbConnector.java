@@ -14,7 +14,7 @@ public class DbConnector {
                 .addAnnotatedClass(Customers.class).addAnnotatedClass(CustomerDetails.class)
                 .addAnnotatedClass(Employee.class).addAnnotatedClass(Product.class)
                 .addAnnotatedClass(Order.class).addAnnotatedClass(OrderDetail.class)
-                .addAnnotatedClass(ProductDetail.class);
+                .addAnnotatedClass(ProductDetail.class).addAnnotatedClass(ProductCategory.class);
         sf = configuration.buildSessionFactory();
     }
 

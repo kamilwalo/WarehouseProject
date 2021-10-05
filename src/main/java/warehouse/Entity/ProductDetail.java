@@ -6,7 +6,6 @@ import javax.persistence.*;
 @Entity
 public class ProductDetail {
 
-
     @OneToOne(optional = false)
     @JoinColumn(name = "id_product", nullable = false)
     private Product product;
@@ -19,12 +18,12 @@ public class ProductDetail {
     @Column(name = "id_product_detail", nullable = false)
     private Integer id;
 
-
+    @ManyToOne
+    @JoinColumn(name = "id_product_category")
+    private ProductCategory productCategory;
 
     public ProductDetail() {
     }
-
-
 
     public Integer getId() {
         return id;
@@ -48,5 +47,13 @@ public class ProductDetail {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    public ProductCategory getProductCategory() {
+        return productCategory;
+    }
+
+    public void setProductCategory(ProductCategory manyToOne) {
+        this.productCategory = manyToOne;
     }
 }
