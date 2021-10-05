@@ -11,8 +11,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import warehouse.Entity.ProductCategory;
 import warehouse.Entity.ProductDetail;
 import warehouse.app.db.DbConnector;
@@ -21,7 +19,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class ProductController implements Initializable {
+public class ProductController extends Controller implements Initializable {
 
     @FXML private TableView<Object[]> productTable;
     @FXML private TableColumn <ProductDetail,Object> idProductColumn;
@@ -31,26 +29,12 @@ public class ProductController implements Initializable {
 
     @FXML private ComboBox categoryComboBox;
 
-
-
     @FXML private TextField searchField;
     @FXML private Button searchButton;
-
-    private DbConnector dbConnector ;
-    private SessionFactory sf ;
-    private Session session ;
-
-    ObservableList<Object[]> products;
+    @FXML private Button addCustomerButton;
 
 
-    private void startSession(){
-        session = sf.getCurrentSession();
-        session.beginTransaction();
-    }
-
-    private void stopSession(){
-        session.getTransaction().commit();
-    }
+    private ObservableList<Object[]> products;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

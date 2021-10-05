@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.AddCustomerController">
+   <children>
+      <Button fx:id="showProductButton" contentDisplay="CENTER" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToProductScene" prefHeight="96.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="20.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="100.0" text="customers" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Add Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="150.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Orders" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="280.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Add order" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="titleProduct" alignment="CENTER" layoutX="321.0" layoutY="20.0" prefHeight="18.0" prefWidth="486.0" style="-fx-font-weight: bold;" styleClass="title" text="Add customer" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Yu Gothic Light" size="39.0" />
+         </font>
+      </Label>
+      <Label fx:id="nameLabel" layoutX="338.0" layoutY="85.0" text="Name" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lastNameLabel" layoutX="555.0" layoutY="85.0" text="Last name" AnchorPane.rightAnchor="208.60000000000002" AnchorPane.topAnchor="85.0">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="phoneLabel" layoutX="293.0" layoutY="125.0" text="Phone number">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="166.0" text="Street">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="305.0" layoutY="204.0" text="Postal code">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="591.0" layoutY="204.0" text="City">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameField" layoutX="350.0" layoutY="104.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="lastNameField" layoutX="594.0" layoutY="104.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="phoneNumberField" layoutX="381.0" layoutY="128.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="120.0" />
+      <TextField fx:id="streetField" layoutX="381.0" layoutY="169.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="160.0" />
+      <TextField fx:id="cityField" layoutX="621.0" layoutY="199.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="postalCodeField" layoutX="381.0" layoutY="202.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="200.0" />
+      <Button fx:id="addUserButton" layoutX="382.0" layoutY="237.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="26.0" prefWidth="150.0" text="Add user" />
+      <Label layoutX="533.0" layoutY="165.0" text="House number">
+         <font>
+            <Font name="Yu Gothic Regular" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hosueNumberField" layoutX="621.0" layoutY="160.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="searchField" alignment="CENTER" layoutX="321.0" layoutY="283.0" prefHeight="34.0" prefWidth="302.0" promptText="find customer" />
+      <Button fx:id="searchButton" layoutX="321.0" layoutY="325.0" mnemonicParsing="false" onAction="#clickedSearchButton" prefHeight="30.0" prefWidth="486.0" text="Search" />
+      <TableView fx:id="customersTable" layoutX="321.0" layoutY="380.0" prefHeight="206.0" prefWidth="486.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="30.0" text="ID" />
+            <TableColumn fx:id="nameColumn" text="name" />
+            <TableColumn fx:id="lastNameColumn" text="last name" />
+            <TableColumn fx:id="phoneColumn" resizable="false" text="phone" />
+            <TableColumn fx:id="streetColumn" minWidth="0.0" prefWidth="150.0" text="street" />
+            <TableColumn fx:id="houseColumn" prefWidth="60.0" text="House number" />
+            <TableColumn fx:id="postalCodeColumn" minWidth="-1.0" prefWidth="50.0" text="Postal code" />
+            <TableColumn fx:id="cityColumn" prefWidth="75.0" text="City" />
+         </columns>
+      </TableView>
+      <CheckBox fx:id="phoneCheckBox" layoutX="638.0" layoutY="291.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="173.0" text="Search by phone number" />
+   </children>
+</AnchorPane>

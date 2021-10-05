@@ -17,6 +17,60 @@ public class CustomerDetails {
     @OneToOne(mappedBy = "customerDetails", cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
     private Customers customers;
 
+    @Column(name = "street", length = 100)
+    private String street;
+
+    @Column(name = "postal_code", length = 6)
+    private String postalCode;
+
+    @Column(name = "city", length = 100)
+    private String city;
+
+    @Column(name ="house_number",length = 10)
+    private String houseNumber;
+
+
+
+    public String getHouseNumber() {
+        return houseNumber;
+    }
+
+    public void setHouseNumber(String houseNumber) {
+        this.houseNumber = houseNumber;
+    }
+
+    public Customers getCustomers() {
+        return customers;
+    }
+
+    public void setCustomers(Customers customers) {
+        this.customers = customers;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getPostalCode() {
+        return postalCode;
+    }
+
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
+    }
+
+    public String getStreet() {
+        return street;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
     public CustomerDetails() {
     }
 

@@ -9,7 +9,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.ProductController">
    <children>
       <Button contentDisplay="CENTER" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
@@ -17,7 +16,7 @@
             <Font size="17.0" />
          </font>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="20.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="100.0" text="Add customer" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
+      <Button fx:id="addCustomerButton" contentDisplay="CENTER" layoutX="120.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAddCustomerScene" prefHeight="96.0" prefWidth="100.0" text="customers" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
          <font>
             <Font size="17.0" />
          </font>
