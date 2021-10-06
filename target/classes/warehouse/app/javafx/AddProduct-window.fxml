@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.AddProductController">
+   <children>
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="83.0" fitWidth="79.0">
+               <image>
+                  <Image url="@../../../editUser.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="productMenuButton" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToProductScene" prefHeight="96.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="64.0">
+               <image>
+                  <Image url="@../../../product.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="customerMenuButton" contentDisplay="CENTER" layoutX="140.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAddCustomerScene" prefHeight="96.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="71.0" fitWidth="71.0">
+               <image>
+                  <Image url="@../../../addCustomer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="144.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="79.0">
+               <image>
+                  <Image url="@../../../orders.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchToAddProductScene" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="73.0">
+               <image>
+                  <Image url="@../../../addProduct.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="139.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="72.0" fitWidth="64.0">
+               <image>
+                  <Image url="@../../../addOrder.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="titleProduct1" alignment="CENTER" layoutX="284.0" layoutY="20.0" prefHeight="18.0" prefWidth="486.0" style="-fx-font-weight: bold;" styleClass="title" text="Add product">
+         <font>
+            <Font name="Serif Regular" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="73.0" layoutX="665.0" layoutY="4.0">
+         <image>
+            <Image url="@../../../addProduct.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="284.0" layoutY="84.0" text="Product name" />
+      <Label layoutX="334.0" layoutY="124.0" text="price" />
+      <Label layoutX="542.0" layoutY="84.0" text="product category" AnchorPane.topAnchor="84.0" />
+      <Label layoutX="588.0" layoutY="124.0" text="quantity" AnchorPane.topAnchor="124.0" />
+      <TextField fx:id="productNameField" layoutX="370.0" layoutY="85.0" prefHeight="20.0" promptText="required" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="productPriceFieldText" layoutX="370.0" layoutY="127.0" promptText="required" AnchorPane.topAnchor="120.0" />
+      <TextField fx:id="productQuantityField" layoutX="642.0" layoutY="127.0" promptText="required" AnchorPane.topAnchor="120.0" />
+      <Button layoutX="370.0" layoutY="167.0" mnemonicParsing="false" onAction="#addProduct" prefHeight="26.0" prefWidth="150.0" text="Add product" AnchorPane.topAnchor="160.0" />
+      <Label fx:id="errorAddProductField" layoutX="542.0" layoutY="165.0" prefHeight="18.0" prefWidth="123.0" style="-fx-text-fill: red; -fx-font-weight: bold;" />
+      <ComboBox fx:id="productCategoryComboBox" layoutX="641.0" layoutY="80.0" prefWidth="150.0" promptText="required" />
+      <Label layoutX="306.0" layoutY="304.0" text="Id product" AnchorPane.rightAnchor="461.6" AnchorPane.topAnchor="305.0" />
+      <Label fx:id="titleProduct11" alignment="CENTER" layoutX="284.0" layoutY="239.0" prefHeight="18.0" prefWidth="486.0" style="-fx-font-weight: bold;" styleClass="title" text="Product Modification ">
+         <font>
+            <Font name="Serif Regular" size="39.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="70.0" fitWidth="74.0" layoutX="701.0" layoutY="226.0">
+         <image>
+            <Image url="@../../../modifyProduct.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="idModificationTextField" layoutX="371.0" layoutY="305.0" promptText="id product" AnchorPane.topAnchor="300.0" />
+      <Button fx:id="findButton" layoutX="524.0" layoutY="300.0" mnemonicParsing="false" onAction="#findProduct" prefHeight="26.0" prefWidth="44.0" text="find" />
+      <Label layoutX="282.79999999999995" layoutY="340.0" text="product name:" AnchorPane.rightAnchor="461.6" AnchorPane.topAnchor="340.0" />
+      <Label layoutX="334.0" layoutY="371.0" text="price:" AnchorPane.rightAnchor="461.6" AnchorPane.topAnchor="371.0" />
+      <Label layoutX="266.0" layoutY="400.0" text="product category:" AnchorPane.rightAnchor="461.6" AnchorPane.topAnchor="400.0" />
+      <Label layoutX="312.0" layoutY="428.0" text="quantity:" AnchorPane.rightAnchor="461.6" AnchorPane.topAnchor="428.0" />
+      <Label fx:id="productNameModificationLabel" layoutX="370.0" layoutY="340.0" style="-fx-font-style: italic;" text="null" />
+      <Label fx:id="priceModificationLabel" layoutX="370.0" layoutY="371.0" style="-fx-font-style: italic;" text="null" />
+      <Label fx:id="categoryModificationLabel" layoutX="370.0" layoutY="400.0" style="-fx-font-style: italic;" text="null" />
+      <Label fx:id="quantityModificationLabel" layoutX="370.0" layoutY="428.0" style="-fx-font-style: italic;" text="null" />
+      <TextField fx:id="productNameTextField" layoutX="561.0" layoutY="336.0" promptText="product name" />
+      <TextField fx:id="priceTextField" layoutX="561.0" layoutY="367.0" promptText="price" />
+      <TextField fx:id="quantityTextField" layoutX="561.0" layoutY="424.0" promptText="quantity" />
+      <ComboBox fx:id="productCategoryModificationComboBox" layoutX="562.0" layoutY="396.0" prefWidth="150.0" promptText="product category" />
+      <Button fx:id="modifyButton" layoutX="562.0" layoutY="453.0" mnemonicParsing="false" onAction="#modifyProduct" prefHeight="26.0" prefWidth="150.0" text="Modify" />
+      <Label fx:id="errorModificationLabel" layoutX="588.0" layoutY="304.0" prefHeight="18.0" prefWidth="140.0" style="-fx-text-fill: red; -fx-font-weight: bold;" />
+      <Button layoutX="369.0" layoutY="453.0" mnemonicParsing="false" onAction="#deleteProduct" prefHeight="26.0" prefWidth="150.0" text="Delete product" />
+   </children>
+</AnchorPane>
