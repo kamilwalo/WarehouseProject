@@ -6,46 +6,25 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.AddCustomerController">
    <children>
-      <Button fx:id="showProductButton" contentDisplay="CENTER" layoutX="32.0" layoutY="27.0" mnemonicParsing="false" onAction="#switchToProductScene" prefHeight="96.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
          <font>
             <Font size="17.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="83.0" fitWidth="79.0">
+               <image>
+                  <Image url="@../../../editUser.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="20.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="100.0" text="customers" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Add Product" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="150.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Orders" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <Button contentDisplay="CENTER" layoutX="120.0" layoutY="280.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Add order" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="140.0">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Button>
-      <Label fx:id="titleProduct" alignment="CENTER" layoutX="321.0" layoutY="20.0" prefHeight="18.0" prefWidth="486.0" style="-fx-font-weight: bold;" styleClass="title" text="Add customer" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="14.0">
-         <font>
-            <Font name="Yu Gothic Light" size="39.0" />
-         </font>
-      </Label>
       <Label fx:id="nameLabel" layoutX="338.0" layoutY="85.0" text="Name" AnchorPane.topAnchor="85.0">
          <font>
             <Font name="Yu Gothic Regular" size="12.0" />
@@ -76,9 +55,9 @@
             <Font name="Yu Gothic Regular" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="nameField" layoutX="350.0" layoutY="104.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="80.0" />
-      <TextField fx:id="lastNameField" layoutX="594.0" layoutY="104.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="80.0" />
-      <TextField fx:id="phoneNumberField" layoutX="381.0" layoutY="128.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="120.0" />
+      <TextField fx:id="nameField" layoutX="350.0" layoutY="104.0" prefHeight="20.0" prefWidth="150.0" promptText="required" AnchorPane.rightAnchor="290.0" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="lastNameField" layoutX="594.0" layoutY="104.0" prefHeight="20.0" prefWidth="150.0" promptText="required" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="80.0" />
+      <TextField fx:id="phoneNumberField" layoutX="381.0" layoutY="128.0" prefHeight="20.0" prefWidth="150.0" promptText="required" AnchorPane.topAnchor="120.0" />
       <TextField fx:id="streetField" layoutX="381.0" layoutY="169.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="160.0" />
       <TextField fx:id="cityField" layoutX="621.0" layoutY="199.0" prefHeight="20.0" prefWidth="150.0" />
       <TextField fx:id="postalCodeField" layoutX="381.0" layoutY="202.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="200.0" />
@@ -104,5 +83,75 @@
          </columns>
       </TableView>
       <CheckBox fx:id="phoneCheckBox" layoutX="638.0" layoutY="291.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="173.0" text="Search by phone number" />
+      <Button fx:id="productMenuButton" alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToProductScene" prefHeight="96.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="56.0" fitWidth="64.0">
+               <image>
+                  <Image url="@../../../product.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="customerMenuButton" contentDisplay="CENTER" layoutX="140.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToAddCustomerScene" prefHeight="96.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="71.0" fitWidth="71.0">
+               <image>
+                  <Image url="@../../../addCustomer.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="140.0" layoutY="144.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="80.0" fitWidth="79.0">
+               <image>
+                  <Image url="@../../../orders.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="145.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="77.0" fitWidth="73.0">
+               <image>
+                  <Image url="@../../../addProduct.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="139.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="140.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="72.0" fitWidth="64.0">
+               <image>
+                  <Image url="@../../../addOrder.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="63.0" fitWidth="64.0" layoutX="664.0" layoutY="11.0">
+         <image>
+            <Image url="@../../../addCustomer.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="titleProduct1" alignment="CENTER" layoutX="284.0" layoutY="20.0" prefHeight="18.0" prefWidth="486.0" style="-fx-font-weight: bold;" styleClass="title" text="Add customer">
+         <font>
+            <Font name="Serif Regular" size="39.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

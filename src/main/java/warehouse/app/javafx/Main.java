@@ -8,8 +8,8 @@ package warehouse.app.javafx;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import warehouse.app.db.DbConnector;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -20,8 +20,12 @@ public class Main extends Application {
         Scene scene = new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Product-windows.fxml"))));
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("style.css")).toExternalForm());
         stage.setScene(scene);
+
+        stage.getIcons().add(new Image("addProduct.png"));
+
         stage.setResizable(false);
         stage.show();
+
 //        new MainFrame();
 
 

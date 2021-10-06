@@ -38,6 +38,7 @@ public class ProductController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setIconToButtonMenu();
 
         productTable.setPlaceholder(new Label("Waiting for connection with db..."));
         Runnable connectToDb = ()-> Platform.runLater(()->{

@@ -49,6 +49,7 @@ public class AddCustomerController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setIconToButtonMenu();
         nameField.setText("");
         lastNameField.setText("");
         phoneNumberField.setText("");
