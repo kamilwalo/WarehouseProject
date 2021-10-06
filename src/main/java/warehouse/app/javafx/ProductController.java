@@ -8,7 +8,6 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import warehouse.Entity.ProductCategory;
@@ -30,8 +29,6 @@ public class ProductController extends Controller implements Initializable {
     @FXML private ComboBox categoryComboBox;
 
     @FXML private TextField searchField;
-    @FXML private Button searchButton;
-    @FXML private Button addCustomerButton;
 
 
     private ObservableList<Object[]> products;
@@ -51,12 +48,12 @@ public class ProductController extends Controller implements Initializable {
             stopSession();
 
             ObservableList<Object> observableList = FXCollections.observableArrayList();
-            observableList.add("-wszystko-");
+            observableList.add("-all-");
             for (ProductCategory productCategory : resultList) {
                 observableList.add(productCategory.getProductCategory());
             }
             categoryComboBox.setItems(observableList);
-            categoryComboBox.setValue("-wszystko-");
+            categoryComboBox.setValue("-all-");
             productTable.setPlaceholder(new Label("No results"));
         });
         Thread thread = new Thread(connectToDb);
@@ -67,12 +64,12 @@ public class ProductController extends Controller implements Initializable {
     public void searchButtonClicked(){
         if(categoryComboBox.getValue()!=null)
         setTable(searchField.getText(), (String) categoryComboBox.getValue());
-        else setTable(searchField.getText(), "-wszystko-");
+        else setTable(searchField.getText(), "-all-");
     }
 
     private void setTable(String textFromSearchField,String category){
         products = FXCollections.observableArrayList();
-        if (category.equals("-wszystko-")) category="";
+        if (category.equals("-all-")) category="";
         startSession();
 
         if (textFromSearchField.equals("") && category.equals(""))

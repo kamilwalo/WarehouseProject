@@ -66,7 +66,7 @@ public class deleteWindow extends FrameInheritance {
 
             List<String[]> list = new ArrayList<>();
             list.add(new String[]{"employee id", String.valueOf(gotEmployee.getEmployeeId())});
-            list.add(new String[]{"employee name", gotEmployee.getNameOfEmploee()});
+            list.add(new String[]{"employee name", gotEmployee.getNameOfEmployee()});
             list.add(new String[]{"employee surname", gotEmployee.getLastNameOfEmployee()});
             list.add(new String[]{"employee position", gotEmployee.getLastNameOfEmployee()});
 

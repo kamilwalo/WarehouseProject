@@ -147,7 +147,7 @@ public class AddOrder extends FrameInheritance {
 
                 infoAboutOrderJLabel.setText(
                         "<html><center>" +
-                                "Employee "+employee.getNameOfEmploee()+" "+employee.getLastNameOfEmployee()+" id="+employee.getEmployeeId()+"<br/>"+
+                                "Employee "+employee.getNameOfEmployee()+" "+employee.getLastNameOfEmployee()+" id="+employee.getEmployeeId()+"<br/>"+
                                 "You are adding product to order for " + customer.getName() +" "+ customer.getLastName() +" IdCustomer="+customer.getCustomerId()+"" +
                                 "</center></html>");
                 productsChosenByUser.add(product);

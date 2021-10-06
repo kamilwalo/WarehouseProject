@@ -44,8 +44,6 @@ public class AddCustomerController extends Controller implements Initializable {
     @FXML private Label phoneLabel;
     @FXML private Label lastNameLabel;
 
-    private ObservableList<Object[]> customers;
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setIconToButtonMenu();
@@ -74,7 +72,7 @@ public class AddCustomerController extends Controller implements Initializable {
     }
 
     private void setDataToTable(String textFromSearchField) {
-        customers = FXCollections.observableArrayList();
+        ObservableList<Object[]> customers = FXCollections.observableArrayList();
 
         startSession();
         if(!phoneCheckBox.isSelected()){
@@ -165,23 +163,10 @@ public class AddCustomerController extends Controller implements Initializable {
             phoneLabel.setStyle("-fx-font-weight: regular");
         }
 
-        if(nameField.getText().equals("") || lastNameField.getText().equals("") || phoneNumberField.getText().equals("")) {
-            return false;
-        }
-        return true;
+        return !nameField.getText().equals("") && !lastNameField.getText().equals("") && !phoneNumberField.getText().equals("");
     }
 
     public void clickedSearchButton(){
         setDataToTable(searchField.getText());
     }
-
-//    private void setDataToDataWithParam(String searchingText) {
-//        customers = FXCollections.observableArrayList();
-//
-//        startSession();
-//
-//        session.createQuery("from Customers ");
-//
-//        stopSession();
-//    }
 }

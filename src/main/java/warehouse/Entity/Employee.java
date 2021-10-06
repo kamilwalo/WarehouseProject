@@ -12,7 +12,7 @@ public class Employee {
     private Integer employeeId;
 
     @Column(name = "first_name")
-    private String nameOfEmploee;
+    private String nameOfEmployee;
 
     @Column(name = "last_name")
     private String lastNameOfEmployee;
@@ -23,18 +23,18 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String nameOfEmploee, String lastNameOfEmployee, String position) {
-        this.nameOfEmploee = nameOfEmploee;
+    public Employee(String nameOfEmployee, String lastNameOfEmployee, String position) {
+        this.nameOfEmployee = nameOfEmployee;
         this.lastNameOfEmployee = lastNameOfEmployee;
         this.position = position;
     }
 
-    public String getNameOfEmploee() {
-        return nameOfEmploee;
+    public String getNameOfEmployee() {
+        return nameOfEmployee;
     }
 
-    public void setNameOfEmploee(String nameOfEmploee) {
-        this.nameOfEmploee = nameOfEmploee;
+    public void setNameOfEmployee(String nameOfEmployee) {
+        this.nameOfEmployee = nameOfEmployee;
     }
 
     public String getLastNameOfEmployee() {
@@ -66,7 +66,7 @@ public class Employee {
     @Override
     public String toString() {
         return  "Id employee=" + employeeId +
-                ",\n name of emploee='" + nameOfEmploee + '\'' +
+                ",\n name of employee='" + nameOfEmployee + '\'' +
                 ",\n surname of employee='" + lastNameOfEmployee + '\'' +
                 ",\n position='" + position + '\'';
     }
