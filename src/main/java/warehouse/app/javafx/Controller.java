@@ -40,6 +40,11 @@ public abstract class Controller {
         switchScene(event);
     }
 
+    public void switchToAddProductScene(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AddProduct-window.fxml")));
+        switchScene(event);
+    }
+
 
     public void switchScene(ActionEvent event){
         stage = (Stage) ((Node)event.getSource()).getScene().getWindow();

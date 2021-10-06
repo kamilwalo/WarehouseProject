@@ -34,10 +34,17 @@
             <Image url="@../../../product.png" />
          </image>
       </ImageView>
-      <Button contentDisplay="CENTER" layoutX="24.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
+      <Button contentDisplay="CENTER" layoutX="24.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
          <font>
             <Font size="17.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="71.0">
+               <image>
+                  <Image url="@../../../editUser.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Button fx:id="productMenuButton" alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="20.0" mnemonicParsing="false" onAction="#switchToProductScene" prefHeight="96.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
          <font>
@@ -75,7 +82,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="145.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="24.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchToAddProductScene" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
          <font>
             <Font size="17.0" />
          </font>

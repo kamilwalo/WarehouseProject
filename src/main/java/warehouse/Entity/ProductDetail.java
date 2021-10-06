@@ -56,4 +56,18 @@ public class ProductDetail {
     public void setProductCategory(ProductCategory manyToOne) {
         this.productCategory = manyToOne;
     }
+
+    public void setPrice(Integer price){
+        product.setPrice(price);
+    }
+
+    @Override
+    public String toString() {
+        return "ProductDetail{" +
+                "product=" + product +
+                ", quantityInStock=" + quantityInStock +
+                ", id=" + id +
+                ", productCategory=" + productCategory +
+                '}';
+    }
 }

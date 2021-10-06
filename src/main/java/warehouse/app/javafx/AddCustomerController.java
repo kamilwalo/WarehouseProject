@@ -9,7 +9,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
 import warehouse.Entity.CustomerDetails;
 import warehouse.Entity.Customers;
 import warehouse.app.db.DbConnector;
@@ -26,7 +25,7 @@ public class AddCustomerController extends Controller implements Initializable {
     @FXML private TextField streetField;
     @FXML private TextField cityField;
     @FXML private TextField postalCodeField;
-    @FXML private TextField hosueNumberField;
+    @FXML private TextField houseNumberField;
 
     @FXML private TableView<Object[]> customersTable;
     @FXML private TableColumn<Customers,Integer> idColumn;
@@ -126,7 +125,7 @@ public class AddCustomerController extends Controller implements Initializable {
             newCustomerDetail.setPostalCode(postalCodeField.getText());
             newCustomerDetail.setCity(cityField.getText());
             newCustomerDetail.setStreet(streetField.getText());
-            newCustomerDetail.setHouseNumber(hosueNumberField.getText());
+            newCustomerDetail.setHouseNumber(houseNumberField.getText());
 
             startSession();
             session.persist(newCustomer);
@@ -136,7 +135,7 @@ public class AddCustomerController extends Controller implements Initializable {
             lastNameField.setText("");
             phoneNumberField.setText("");
             streetField.setText("");
-            hosueNumberField.setText("");
+            houseNumberField.setText("");
             postalCodeField.setText("");
             cityField   .setText("");
         }

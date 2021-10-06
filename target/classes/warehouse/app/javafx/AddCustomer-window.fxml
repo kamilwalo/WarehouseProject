@@ -13,10 +13,17 @@
 
 <AnchorPane fx:id="productPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="warehouse.app.javafx.AddCustomerController">
    <children>
-      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" text="Show Product" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
+      <Button contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="380.0">
          <font>
             <Font size="17.0" />
          </font>
+         <graphic>
+            <ImageView fitHeight="83.0" fitWidth="79.0">
+               <image>
+                  <Image url="@../../../editUser.png" />
+               </image>
+            </ImageView>
+         </graphic>
       </Button>
       <Label fx:id="nameLabel" layoutX="338.0" layoutY="85.0" text="Name" AnchorPane.topAnchor="85.0">
          <font>
@@ -54,13 +61,13 @@
       <TextField fx:id="streetField" layoutX="381.0" layoutY="169.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="160.0" />
       <TextField fx:id="cityField" layoutX="621.0" layoutY="199.0" prefHeight="20.0" prefWidth="150.0" />
       <TextField fx:id="postalCodeField" layoutX="381.0" layoutY="202.0" prefHeight="20.0" prefWidth="150.0" AnchorPane.topAnchor="200.0" />
-      <Button fx:id="addUserButton" layoutX="382.0" layoutY="237.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="26.0" prefWidth="150.0" text="Add user" />
+      <Button fx:id="addUserButton" layoutX="382.0" layoutY="237.0" mnemonicParsing="false" onAction="#createCustomer" prefHeight="26.0" prefWidth="150.0" text="Add customer" />
       <Label layoutX="533.0" layoutY="165.0" text="House number">
          <font>
             <Font name="Yu Gothic Regular" size="12.0" />
          </font>
       </Label>
-      <TextField fx:id="hosueNumberField" layoutX="621.0" layoutY="160.0" prefHeight="20.0" prefWidth="150.0" />
+      <TextField fx:id="houseNumberField" layoutX="621.0" layoutY="160.0" prefHeight="20.0" prefWidth="150.0" />
       <TextField fx:id="searchField" alignment="CENTER" layoutX="321.0" layoutY="283.0" prefHeight="34.0" prefWidth="302.0" promptText="find customer" />
       <Button fx:id="searchButton" layoutX="321.0" layoutY="325.0" mnemonicParsing="false" onAction="#clickedSearchButton" prefHeight="30.0" prefWidth="486.0" text="Search" />
       <TableView fx:id="customersTable" layoutX="321.0" layoutY="380.0" prefHeight="206.0" prefWidth="486.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
@@ -112,7 +119,7 @@
             </ImageView>
          </graphic>
       </Button>
-      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="145.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
+      <Button alignment="CENTER" contentDisplay="CENTER" layoutX="20.0" layoutY="145.0" mnemonicParsing="false" onAction="#switchToAddProductScene" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="140.0">
          <font>
             <Font size="17.0" />
          </font>
