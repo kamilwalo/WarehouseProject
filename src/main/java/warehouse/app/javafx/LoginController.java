@@ -23,12 +23,13 @@ public class LoginController extends Controller implements Initializable {
     @FXML private TextField loginField;
     @FXML private PasswordField passwordField;
     @FXML private Label error;
-    @FXML private CheckBox passwordCheckBox;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         dbConnector = new DbConnector();
         sf = dbConnector.getSf();
+        loginField.setText("test");
+        passwordField.setText("test");
     }
 
     public void login(ActionEvent event) throws IOException {

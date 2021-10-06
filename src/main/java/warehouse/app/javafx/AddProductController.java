@@ -40,6 +40,7 @@ public class AddProductController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setInfoAboutAccount();
         ObservableList<Object>  listOfProductCategory = FXCollections.observableArrayList();
         Runnable connectToDb = ()-> Platform.runLater(()->{
             dbConnector = new DbConnector();
@@ -175,7 +176,7 @@ public class AddProductController extends Controller implements Initializable {
                 productDetail.setProduct(product);
                 productDetail.setQuantityInStock(Integer.valueOf(productQuantityField.getText()));
                 ProductCategory productCategory = new ProductCategory();
-                productCategory.setId(productCategoryComboBox.getSelectionModel().getSelectedIndex());
+                productCategory.setId(productCategoryComboBox.getSelectionModel().getSelectedIndex()+1);
                 productDetail.setProductCategory(productCategory);
 
                 startSession();

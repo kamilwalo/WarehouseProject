@@ -46,6 +46,7 @@ public class AddCustomerController extends Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        setInfoAboutAccount();
         setIconToButtonMenu();
         nameField.setText("");
         lastNameField.setText("");

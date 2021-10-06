@@ -12,7 +12,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import warehouse.Entity.ProductCategory;
 import warehouse.Entity.ProductDetail;
-import warehouse.app.EmployeeLoginContainer;
 import warehouse.app.db.DbConnector;
 
 import java.net.URL;
@@ -37,7 +36,7 @@ public class ProductController extends Controller implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setIconToButtonMenu();
-
+        setInfoAboutAccount();
         productTable.setPlaceholder(new Label("Waiting for connection with db..."));
         Runnable connectToDb = ()-> Platform.runLater(()->{
             dbConnector = new DbConnector();
@@ -73,6 +72,7 @@ public class ProductController extends Controller implements Initializable {
         if (category.equals("-all-")) category="";
         startSession();
 
+        //this if checking if the text in textFrom SearchField is correct
         if (textFromSearchField.equals("") && category.equals(""))
             products.addAll(session.createQuery("from  ProductDetail ").getResultList());
         else
@@ -97,8 +97,6 @@ public class ProductController extends Controller implements Initializable {
             products.addAll(session.createQuery("from ProductDetail where product.productName like '%" + textFromSearchField + "%' and productCategory.productCategory=:productCategory")
                             .setParameter("productCategory",category)
                     .getResultList());
-
-
 
         stopSession();
 

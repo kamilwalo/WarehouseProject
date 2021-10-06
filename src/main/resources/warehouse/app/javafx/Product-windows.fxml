@@ -106,5 +106,6 @@
             </ImageView>
          </graphic>
       </Button>
+      <Label fx:id="infoAboutAccount" alignment="CENTER" layoutX="20.0" layoutY="1.0" prefHeight="18.0" prefWidth="220.0" text="Hello" />
    </children>
 </AnchorPane>
