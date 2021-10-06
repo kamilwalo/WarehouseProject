@@ -60,7 +60,7 @@ public abstract class Controller {
     }
 
     protected void setIconToButtonMenu(){
-        ImageView customerImage = new ImageView(new Image("addCustomer.png"));
+        ImageView customerImage = new ImageView(new Image("images/addCustomer.png"));
         customerImage.setFitHeight(75);
         customerImage.setFitWidth(75);
         customerMenuButton.setGraphic(customerImage);

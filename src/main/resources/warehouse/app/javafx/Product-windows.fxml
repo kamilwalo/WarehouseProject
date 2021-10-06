@@ -31,7 +31,7 @@
       <ComboBox fx:id="categoryComboBox" layoutX="700.0" layoutY="107.0" prefHeight="26.0" prefWidth="100.0" />
       <ImageView fitHeight="44.0" fitWidth="50.0" layoutX="642.0" layoutY="6.0">
          <image>
-            <Image url="@../../../product.png" />
+            <Image url="@../../../images/product.png" />
          </image>
       </ImageView>
       <Button contentDisplay="CENTER" layoutX="24.0" layoutY="380.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="100.0" textAlignment="CENTER" wrapText="true" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0">
@@ -39,9 +39,9 @@
             <Font size="17.0" />
          </font>
          <graphic>
-            <ImageView fitHeight="70.0" fitWidth="71.0">
+            <ImageView fitHeight="83.0" fitWidth="79.0">
                <image>
-                  <Image url="@../../../editUser.png" />
+                  <Image url="@../../../images/editUser.png" />
                </image>
             </ImageView>
          </graphic>
@@ -53,7 +53,7 @@
          <graphic>
             <ImageView fitHeight="56.0" fitWidth="64.0">
                <image>
-                  <Image url="@../../../product.png" />
+                  <Image url="@../../../images/product.png" />
                </image>
             </ImageView>
          </graphic>
@@ -65,7 +65,7 @@
          <graphic>
             <ImageView fitHeight="71.0" fitWidth="71.0">
                <image>
-                  <Image url="@../../../addCustomer.png" />
+                  <Image url="@../../../images/addCustomer.png" />
                </image>
             </ImageView>
          </graphic>
@@ -77,7 +77,7 @@
          <graphic>
             <ImageView fitHeight="80.0" fitWidth="79.0">
                <image>
-                  <Image url="@../../../orders.png" />
+                  <Image url="@../../../images/orders.png" />
                </image>
             </ImageView>
          </graphic>
@@ -89,7 +89,7 @@
          <graphic>
             <ImageView fitHeight="77.0" fitWidth="73.0">
                <image>
-                  <Image url="@../../../addProduct.png" />
+                  <Image url="@../../../images/addProduct.png" />
                </image>
             </ImageView>
          </graphic>
@@ -101,7 +101,7 @@
          <graphic>
             <ImageView fitHeight="72.0" fitWidth="64.0">
                <image>
-                  <Image url="@../../../addOrder.png" />
+                  <Image url="@../../../images/addOrder.png" />
                </image>
             </ImageView>
          </graphic>

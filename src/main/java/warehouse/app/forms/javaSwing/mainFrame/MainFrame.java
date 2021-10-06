@@ -12,7 +12,6 @@ import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO make it pretty
 
 
 public class MainFrame extends FrameInheritance {

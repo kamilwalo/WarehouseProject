@@ -20,7 +20,7 @@
          <graphic>
             <ImageView fitHeight="83.0" fitWidth="79.0">
                <image>
-                  <Image url="@../../../editUser.png" />
+                  <Image url="@../../../images/editUser.png" />
                </image>
             </ImageView>
          </graphic>
@@ -90,7 +90,7 @@
          <graphic>
             <ImageView fitHeight="56.0" fitWidth="64.0">
                <image>
-                  <Image url="@../../../product.png" />
+                  <Image url="@../../../images/product.png" />
                </image>
             </ImageView>
          </graphic>
@@ -102,7 +102,7 @@
          <graphic>
             <ImageView fitHeight="71.0" fitWidth="71.0">
                <image>
-                  <Image url="@../../../addCustomer.png" />
+                  <Image url="@../../../images/addCustomer.png" />
                </image>
             </ImageView>
          </graphic>
@@ -114,7 +114,7 @@
          <graphic>
             <ImageView fitHeight="80.0" fitWidth="79.0">
                <image>
-                  <Image url="@../../../orders.png" />
+                  <Image url="@../../../images/orders.png" />
                </image>
             </ImageView>
          </graphic>
@@ -126,7 +126,7 @@
          <graphic>
             <ImageView fitHeight="77.0" fitWidth="73.0">
                <image>
-                  <Image url="@../../../addProduct.png" />
+                  <Image url="@../../../images/addProduct.png" />
                </image>
             </ImageView>
          </graphic>
@@ -138,14 +138,14 @@
          <graphic>
             <ImageView fitHeight="72.0" fitWidth="64.0">
                <image>
-                  <Image url="@../../../addOrder.png" />
+                  <Image url="@../../../images/addOrder.png" />
                </image>
             </ImageView>
          </graphic>
       </Button>
       <ImageView fitHeight="63.0" fitWidth="64.0" layoutX="664.0" layoutY="11.0">
          <image>
-            <Image url="@../../../addCustomer.png" />
+            <Image url="@../../../images/addCustomer.png" />
          </image>
       </ImageView>
       <Label fx:id="titleProduct1" alignment="CENTER" layoutX="284.0" layoutY="20.0" prefHeight="18.0" prefWidth="486.0" style="-fx-font-weight: bold;" styleClass="title" text="Add customer">

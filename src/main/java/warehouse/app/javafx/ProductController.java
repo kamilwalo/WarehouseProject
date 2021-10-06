@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import warehouse.Entity.ProductCategory;
 import warehouse.Entity.ProductDetail;
+import warehouse.app.EmployeeLoginContainer;
 import warehouse.app.db.DbConnector;
 
 import java.net.URL;

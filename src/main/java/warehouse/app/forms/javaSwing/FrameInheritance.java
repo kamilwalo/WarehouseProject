@@ -20,7 +20,7 @@ public abstract class FrameInheritance  extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(new Dimension(WINDOW_WIDTH,WINDOW_HEIGHT));
         setLocationRelativeTo(null);
-        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icon.png")));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/images/icon.png")));
     }
 
     protected void startSession(){

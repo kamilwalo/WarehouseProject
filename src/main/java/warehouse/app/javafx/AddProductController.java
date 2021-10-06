@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import warehouse.Entity.Product;
 import warehouse.Entity.ProductCategory;
 import warehouse.Entity.ProductDetail;
+import warehouse.app.EmployeeLoginContainer;
 import warehouse.app.db.DbConnector;
 
 import java.net.URL;
