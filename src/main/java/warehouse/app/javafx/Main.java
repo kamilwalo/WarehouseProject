@@ -22,6 +22,16 @@ public class Main extends Application {
         stage.show();
 
 //        new MainFrame();
+        System.out.println("lol");
+
+        String aa = "ss";
+        String ab = "sssss";
+        if (aa.equals(ab)){
+            System.out.println("lol");
+        }
+
+
+
 
 
     }

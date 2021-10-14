@@ -100,6 +100,7 @@ public class ProductController extends Controller implements Initializable {
 
         stopSession();
 
+        //adding product to column
         idProductColumn.setCellValueFactory(data -> new SimpleObjectProperty(data.getValue().getProduct().getProductId()));
         nameOfProductColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue().getProduct().getProductName()));
         priceOfProductColumn.setCellValueFactory(data -> new SimpleObjectProperty<>(data.getValue().getProduct().getPrice()));

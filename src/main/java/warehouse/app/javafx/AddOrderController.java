@@ -42,6 +42,7 @@ public class AddOrderController extends Controller implements Initializable {
     }
 
     public void clickedButtonSearch(ActionEvent event){
+
         if(searchForField.getText().equals("")) setDataToTable("");
         else setDataToTable(searchForField.getText());
     }
@@ -53,22 +54,22 @@ public class AddOrderController extends Controller implements Initializable {
         startSession();
         if(!searchByPhoneNumber.isSelected()){
             if (textFromSearchField.equals(""))
-                customers.addAll(session.createQuery("from Customers ").getResultList());
+                customers.addAll(session.createQuery("from Customers ").setMaxResults(10).getResultList());
             else if (searchForField.getText().matches("[0-9]+")) {
-                customers.addAll(session.createQuery("from Customers where id=:text")
+                customers.addAll(session.createQuery("from Customers where id=:text").setMaxResults(10)
                         .setParameter("text", Integer.parseInt(textFromSearchField))
                         .getResultList());
             } else
                 customers.addAll(session.createQuery("from Customers where name=:text or lastName=:text " +
                                 "or customerDetails.city=:text or customerDetails.phoneNumber=:text or customerDetails.postalCode=:text or " +
-                                "customerDetails.street=:text")
+                                "customerDetails.street=:text").setMaxResults(10)
                         .setParameter("text", textFromSearchField)
                         .getResultList());
         }else {
             if (textFromSearchField.equals(""))
-                customers.addAll(session.createQuery("from Customers ").getResultList());
+                customers.addAll(session.createQuery("from Customers ").setMaxResults(10).getResultList());
             else
-                customers.addAll(session.createQuery("from Customers where customerDetails.phoneNumber='%"+textFromSearchField+"%'").getResultList());
+                customers.addAll(session.createQuery("from Customers where customerDetails.phoneNumber='%"+textFromSearchField+"%'").setMaxResults(10).getResultList());
         }
         stopSession();
 
@@ -79,6 +80,4 @@ public class AddOrderController extends Controller implements Initializable {
 
         customerComboBox.setItems(listOfCustomers);
     }
-
-
 }
